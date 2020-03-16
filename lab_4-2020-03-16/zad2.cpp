@@ -24,15 +24,15 @@ int main(int argc, char *argv[]){
   cout << "Podaj liczbe do funkcji" << endl;                            
   for (int i = 1; i < argc; i++) {
     if (*argv[i] == '1') {
-      First();
+      Pierwsza();
     } else if (*argv[i] == '2') {
-      Second();
+      Druga();
     } else if (*argv[i] == '3') {
-      Third();
+      Trzecia();
     } else if (*argv[i] == '4') {
-      Fourth();
+      Czwarta();
     } else if (*argv[i] == '5') {
-      Fifth();
+      Piata();
     } else {
       cout << "Podaj 1 do 5" << endl;
     }
