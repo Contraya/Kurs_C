@@ -16,13 +16,17 @@ using namespace std;
  * so to be portable it is best to write main to take two arguments, and use the value of environ. 
 */
 
-int main(int argc, char *argv[]){
-    cout << "liczba argumentow: " << argc << endl;
-    for (int i = 1; i < argc; i++){
-            cout<<argv[i]<<endl;
-    }
-    while(*envp){
-        printf("%s\n",*envp++)
-    }
+int main(int argc, char *argv[], char *envp[])
+{
+
+  cout <<"Liczba argumentow: "<< argc << endl;
+  for (int i = 1; i < argc; i++) {
+      cout << argv[i] << endl;
+   }
+
+
+  while(*envp) {
+     printf("%s\n",*envp++);
+  }
     return 0;
 }
