@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+#include <iterator>
 using namespace std;
 
 
@@ -35,11 +36,13 @@ void przekaz1D(int tab[]){ ///Przekazywanie tablic 1D
 
 //---z zachowaniem rozmiaru --------
 // Zadanie
-void przekaz1DA(int tab[]){ 
-	for (int i = 0; i<sizeof(*tab); i++){
+void przekaz1DA(int *tab, int size){ 
+	//int iSize = sizeof(tab)/sizeof(tab[0])
+	//int size =  sizeof(tab)/sizeof(*tab);
+	for (int i = 0; i< size; i++){
         cout << i << "\t" << tab[i] << endl;
      }
-	 cout <<"Zmienić tablice w funkcji. Wypisać poza funkcją."<< endl;
+	cout <<"Zmienić tablice w funkcji. Wypisać poza funkcją."<< endl;
     cout <<"Czy wartości poza funkcją się zmieniły?"<< endl;
     cout <<"-------------------"<< endl;
  } 
@@ -67,9 +70,6 @@ void przekaz2D(int tab[3][3]) {///Przekazywanie tablic 2D
 	}
   cout <<"-------------------"<< endl;
 }
-
-
-
 
 
 
@@ -105,7 +105,7 @@ int main() {
     przekaz1D(tablica1D);
     przekaz1Dwsk(tablica1D);
 
-	przekaz1DA(tablica1D);
+	przekaz1DA(tablica1D, 6);
 
     //--------------------------------------
 	int tablica2D[3][3];
