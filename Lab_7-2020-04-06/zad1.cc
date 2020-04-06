@@ -1,5 +1,5 @@
 include <iostream>
-//piorytety operastrow
+//piorytety operatorów
 using namespace std;
 
 int main(){
