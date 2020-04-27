@@ -1,37 +1,28 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
-int main(){
-	char imie2[10];
-	cout << "Podaj Ania żeby wyświetlić Ania analogiczie dla Ola" << endl;
-	cin >> imie2;
-	switch(imie2[0]){
-	case 'A': case 'a':
-		switch(imie2[1]){
-			case 'n': case 'N':
-				switch(imie2[2]){
-					case 'i': case 'I':
-						switch(imie2[3]){
-							case 'A': case 'a':
-								cout << "Wybrano Anie" << endl;
-								break;
-						}break;				
-				}break;		
-		}break;
-	case 'O': case 'o':
-		switch(imie2[1]){
-			case 'l': case 'L':
-				switch(imie2[2]){
-					case 'a': case 'A':
-						cout << "Wybrano Olę" << endl;
-						break;
-				}break;
-		
-		}break;
-	
-	default:
-		cout << "Nie wybrano!" << endl;
+inr index(string tab[], string s, int size){
+	for(int i = 0; i < size; i++){
+		if(tab[i] == s) return i;
 	}
+	return -1;
+}
+
+int main(){
+	string imiona[] = {"Ania", "Ola"};
+	string imie;
+	cout << "Podaj Ania żeby wyświetlić Ania analogiczie dla Ola" << endl;
+	cin >> imie;
+	switch(index(imiona, imie, sizeof(imiona)/sizeof(*imiona))){
+	case 0:
+		count << "Wybrano Ania" << endl;
+		break;
+	case 1:
+		cout << "Wybrano Ole" << endl;
+		break;
+	default:
+		cout << "Nie wybrano imienia" << endl;
 	return 0;
 }
