@@ -62,7 +62,7 @@ public:
 
     int *C(int a);
 
-    void D(int a);
+    void D(int *tab);
 
     void zwracanie();
 

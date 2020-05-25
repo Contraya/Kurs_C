@@ -72,7 +72,6 @@ void ZadKcpp::D(int *tab){
     for (int i = 0; i<6; i++){
         cout << i << "\t" << tab[i] << endl;
      }
-  
 }
 
 
@@ -167,7 +166,7 @@ void ZadKcpp::wywolanieFunkcji(int argc, char **argv) {
             break;
     }
 
-    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() :  (*argv[1] == '4') ? Czwarta() : (*argv[1] == '5') ? Piata() : cout << "Zły argument\n";
+    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() :  (*argv[1] == '4') ? Czwarta() : cout << "Zły argument\n";
 }
 
 void ZadKcpp::priorytetyOperatorow() {
@@ -306,7 +305,7 @@ void ZadKcpp::Switch() {
     string imie;
 	cout << "Podaj Ania żeby wyświetlić Ania analogiczie dla Ola" << endl;
 	cin >> imie;
-   switch(index(imiona, imie, sizeof((imiona)/sizeof(*imiona)))){
+   switch(index(imiona, imie, sizeof(imiona)/sizeof(*imiona))){
 	case 0:
 		cout << "Wybrano Ania" << endl;
 		break;
