@@ -166,7 +166,7 @@ void ZadKcpp::wywolanieFunkcji(int argc, char **argv) {
             break;
     }
 
-    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() :  (*argv[1] == '4') ? Czwarta() : cout << "Zły argument\n";
+    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() : (*argv[1] == '4') ? Czwarta() : printf("Zły argument\n");
 }
 
 void ZadKcpp::priorytetyOperatorow() {
