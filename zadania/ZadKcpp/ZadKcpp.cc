@@ -28,7 +28,9 @@ extern "C" void ZadKcpp::Czwarta() {
 extern "C" void ZadKcpp::Piata() {
     cout << "funkcja 5" << endl;
 }
-
+void ZadKcpp::Blad(){
+    cout << "Zły argument\n";
+}
 void ZadKcpp::mainExample(int argc, char *argv[]){
   cout << "Podaj liczbe do funkcji" << endl;                            
   for (int i = 1; i < argc; i++) {
@@ -166,7 +168,7 @@ void ZadKcpp::wywolanieFunkcji(int argc, char **argv) {
             break;
     }
 
-    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() : (*argv[1] == '4') ? Czwarta() : printf("Zły argument\n");
+    (*argv[1] == '1') ? Pierwsza() : (*argv[1] == '2') ? Druga() : (*argv[1] == '3') ? Trzecia() : (*argv[1] == '4') ? Czwarta() : Blad();
 }
 
 void ZadKcpp::priorytetyOperatorow() {

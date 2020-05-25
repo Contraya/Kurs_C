@@ -64,6 +64,8 @@ public:
 
     void D(int *tab);
 
+    void Blad();
+
     void zwracanie();
 
     void adresowaniePamieci();
