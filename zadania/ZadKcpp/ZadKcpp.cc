@@ -27,7 +27,7 @@ extern "C" void ZadKcpp::Piata() {
     cout << "funkcja 5" << endl;
 }
 
-int ZadKcpp::mainExample(int argc, char *argv[]){
+void ZadKcpp::mainExample(int argc, char *argv[]){
   cout << "Podaj liczbe do funkcji" << endl;                            
   for (int i = 1; i < argc; i++) {
     if (*argv[i] == '1') {
@@ -66,7 +66,7 @@ int *ZadKcpp::C(int a) {
 	return b;
 }
 
-void ZadKcpp::D(int tab[]){
+void ZadKcpp::D(int *tab){
     for (int i = 0; i<6; i++){
         cout << i << "\t" << tab[i] << endl;
      }
@@ -101,7 +101,6 @@ void ZadKcpp::adresowaniePamieci() {
     cout << "Addres pierwszej zmiennej: " << (unsigned long) &a << endl;
     cout << "Addres drugiej zmiennej: " << (unsigned long) &b << endl;
     cout << "Addres trzeciej zmiennej: " << (unsigned long) &c << endl;
-    return 0;
 }
 
 void ZadKcpp::iq() {
@@ -271,8 +270,8 @@ void ZadKcpp::_while() {
 }
 
 void ZadKcpp::_do_while() {
-    i = 1;
-    sum = 0;
+    int i = 1;
+    int sum = 0;
     do {
         sum += i;
         i++;
@@ -288,13 +287,13 @@ void ZadKcpp::_continue() {
 }
 
 void ZadKcpp::Petle() {
-    findExamples();
+    SzukajPrzyklad();
     _while();
     _do_while();
     _continue();
 }
 
-int ZadKcpp::index(string tab[], string s, int size) {
+int ZadKcpp::index(string *tab, string s, int size) {
     for(int i = 0; i < size; i++){
 		if(tab[i] == s) return i;
 	}
@@ -308,7 +307,7 @@ void ZadKcpp::Switch() {
 	cin >> imie;
    switch(index(imiona, imie, sizeof(imiona)/sizeof(*imiona))){
 	case 0:
-		count << "Wybrano Ania" << endl;
+		cout << "Wybrano Ania" << endl;
 		break;
 	case 1:
 		cout << "Wybrano Ole" << endl;
