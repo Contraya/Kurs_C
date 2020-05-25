@@ -280,7 +280,7 @@ void ZadKcpp::_do_while() {
 }
 
 void ZadKcpp::_continue() {
-    for (i=0;i<5;i++) {
+    for (int i = 0; i < 5;  i++) {
         if (i % 2 == 0) continue;
         cout << "Char := " << test[i] << endl;
     }  
