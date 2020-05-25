@@ -3,7 +3,7 @@
 
 using namespace std;
 
-inr index(string tab[], string s, int size){
+int index(string tab[], string s, int size){
 	for(int i = 0; i < size; i++){
 		if(tab[i] == s) return i;
 	}
@@ -24,5 +24,6 @@ int main(){
 		break;
 	default:
 		cout << "Nie wybrano imienia" << endl;
+	}
 	return 0;
 }

@@ -22,14 +22,14 @@ int main() {
         sum += i;
         i++;
     }
-    cout << "Pętla while, sum = " << sum << endl;
+    cout << "Pętla while, suma = " << sum << endl;
     i = 1;
     sum = 0;
     do {
         sum += i;
         i++;
     } while (i <= 5);
-    cout << "Pętla do while, sum = " << sum << endl;
+    cout << "Pętla do while, suma = " << sum << endl;
     for (i=0;i<5;i++) {
         if (i % 2 == 0) continue;
         cout << "Char := " << test[i] << endl;

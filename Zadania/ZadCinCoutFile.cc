@@ -6,14 +6,14 @@ using namespace std;
 
 int main() {
     string str;
-    cout << "Zzapis do pliku. Podaj co chcesz zapisać:  " << endl;
+    cout << "Zapis do pliku. Podaj co chcesz zapisać:  " << endl;
 
     getline(cin, str);
     ofstream file;
     file.open("ZadCinCoutFile.txt", ios_base::app);
     file << str << endl;
     file.close();
-    cout << endl << "Czytanie z pliku" << endl << endl;;
+    cout << endl << "Czytanie z pliku" << endl << endl;
 
     ifstream rfile;
     string line;
