@@ -98,7 +98,7 @@ public:
 
     void Petle();
 
-    int index(string names[], string s);
+    int index(string *tab, string s, int size);
 
     void Switch();
 };
